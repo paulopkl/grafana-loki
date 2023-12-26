@@ -1,0 +1,11 @@
+## ADD REPOSITORY
+helm repo add grafana-loki https://grafana.github.io/helm-charts
+helm repo update
+
+## INSTALL LOKI-STACK TO CLUSTER KUBERNETES
+helm upgrade --install loki grafana-loki/loki-stack --values=./loki-values.yaml --version 2.9.11 -n loki --create-namespace
+
+## UNINSTALL LOKI-STACK
+helm uninstall loki grafana-loki/loki-stack -n loki
+
+kubectl port-forward pod/loki-promtail-[Random Id] 8085:3101 -n loki

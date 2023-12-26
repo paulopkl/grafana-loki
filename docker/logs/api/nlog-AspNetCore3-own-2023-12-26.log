@@ -1,0 +1,10 @@
+datetime="2023-12-26 00:00:32.9803" eventId=0 logLevel="DEBUG" logger="PedeLogo.Catalogo.Api.Program" message="init main" exception="" url= action=
+datetime="2023-12-26 00:00:33.3709" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Now listening on: http://[::]:80" exception="" url= action=
+datetime="2023-12-26 00:00:33.3854" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Application started. Press Ctrl+C to shut down." exception="" url= action=
+datetime="2023-12-26 00:00:33.3922" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Hosting environment: Production" exception="" url= action=
+datetime="2023-12-26 00:00:33.3922" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Content root path: /app" exception="" url= action=
+datetime="2023-12-26 00:49:18.1849" eventId=0 logLevel="DEBUG" logger="PedeLogo.Catalogo.Api.Program" message="init main" exception="" url= action=
+datetime="2023-12-26 00:49:18.4767" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Now listening on: http://[::]:80" exception="" url= action=
+datetime="2023-12-26 00:49:18.4917" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Application started. Press Ctrl+C to shut down." exception="" url= action=
+datetime="2023-12-26 00:49:18.4917" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Hosting environment: Production" exception="" url= action=
+datetime="2023-12-26 00:49:18.5012" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Content root path: /app" exception="" url= action=

@@ -1,0 +1,5 @@
+python index.py
+
+kubectl logs
+kubectl get svc -n loki
+kubectl port-forward svc/loki -n loki 3100:3100

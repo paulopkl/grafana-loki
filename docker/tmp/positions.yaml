@@ -1,0 +1,7 @@
+positions:
+  /logs/api/internal-nlog-AspNetCore3.log: "3770"
+  /logs/api/nlog-AspNetCore3-all-2023-12-25.log: "5475"
+  /logs/api/nlog-AspNetCore3-all-2023-12-26.log: "1512"
+  /logs/api/nlog-AspNetCore3-own-2023-12-25.log: "6338"
+  /logs/api/nlog-AspNetCore3-own-2023-12-26.log: "1642"
+  /var/log/dpkg.log: "3301"

@@ -1,0 +1,18 @@
+## INSTALL LOGCLI BINARY
+
+## FORWARD LOKI 3100 PORT
+kubectl port-forward -n loki svc/loki 3100:3100
+
+OR
+
+## DEFINE AN EXTERNAL HOST FROM INTERNET
+export LOKI_ADDR=http://[My Cluster Kubernetes Loki Service]
+export LOKI_ADDR=http://localhost
+export LOKI_USERNAME=<username>
+export LOKI_PASSWORD=<password>
+
+## LOGCLI LABELS
+logcli labels
+logcli labels job
+logcli --username=<> --password=<>
+logcli query '{job="default/pedelogo"}'

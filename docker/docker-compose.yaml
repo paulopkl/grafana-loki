@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "mongouser"
+      MONGO_INITDB_ROOT_PASSWORD: "mongopwd"
+    networks:
+      - loki
+
+  pedelogo:
+    depends_on:
+      - mongodb
+    image: fabricioveronez/pedelogo-catalogo:v1
+    container_name: pedelogo
+    ports:
+      - 8080:80
+    environment:
+      Mongo__Host: "mongodb"
+      Mongo__User: "mongouser"
+      Mongo__Password: "mongopwd"
+      Mongo__Port: "27017"
+      Mongo__DataBase: "admin"
+    volumes:
+      - "./logs/api:/log"
+    networks:
+      - loki
+    
+  loki:
+    container_name: loki
+    image: grafana/loki:2.0.0
+    ports:
+      - 3100:3100
+    command:
+      - -config.file=/etc/loki/local-config.yaml
+      - -print-config-stderr=true
+    # volumes:
+    #   - ./.docker/grafana-loki/:/etc/loki/
+    networks:
+      - loki
+
+  promtail:
+    container_name: promtail
+    image: grafana/promtail:2.0.0
+    command: -config.file=/etc/promtail/config.yaml
+    ports:
+      - 9080:9080
+    volumes:
+      - ./promtail/promtail-config.yaml:/etc/promtail/config.yaml
+      - ./logs/api:/logs/api
+      - ./tmp:/tmp
+    networks:
+      - loki
+
+networks:
+  loki:
+    driver: bridge
